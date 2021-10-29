@@ -1,5 +1,6 @@
 package com.example.applistatarefa.activity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -16,6 +17,7 @@ import android.view.View;
 
 import com.example.applistatarefa.adapter.TarefaAdapter;
 import com.example.applistatarefa.databinding.ActivityMainBinding;
+import com.example.applistatarefa.helper.DbHelper;
 import com.example.applistatarefa.helper.RecyclerItemClickListener;
 import com.example.applistatarefa.model.Tarefa;
 
