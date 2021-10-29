@@ -19,6 +19,7 @@ import com.example.applistatarefa.adapter.TarefaAdapter;
 import com.example.applistatarefa.databinding.ActivityMainBinding;
 import com.example.applistatarefa.helper.DbHelper;
 import com.example.applistatarefa.helper.RecyclerItemClickListener;
+import com.example.applistatarefa.helper.TarefaDAO;
 import com.example.applistatarefa.model.Tarefa;
 
 import android.view.Menu;
@@ -86,13 +87,8 @@ public class MainActivity extends AppCompatActivity {
     public void carregarListaTarefas(){
 
         // listar tarefas
-        Tarefa tarefa1 = new Tarefa();
-        tarefa1.setNomeTarefa("Ir ao mercado");
-        listaTarefas.add(tarefa1);
-
-        Tarefa tarefa2 = new Tarefa();
-        tarefa2.setNomeTarefa("Ir a feira");
-        listaTarefas.add(tarefa2);
+        TarefaDAO tarefaDAO = new TarefaDAO(getApplicationContext());
+        listaTarefas = tarefaDAO.listar();
 
         /*
             Exibi listar de taredas no recyclerview
